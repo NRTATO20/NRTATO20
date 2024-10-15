@@ -5,14 +5,14 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "census2024",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/gov.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    
+    "entryPoint": "App.tsx",
     "ios": {
       "supportsTablet": true
     },
