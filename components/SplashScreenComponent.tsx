@@ -8,13 +8,13 @@ import Animated, {
 } from "react-native-reanimated";
 import { useNavigation } from "@react-navigation/native";
 
-const SplashScreenComponent = () => {
+const Component = () => {
   const navigation = useNavigation();
 
   // Shared values for animations
-  const opacity = useSharedValue(0); // Opacity starts at 0 (invisible)
-  const translateY = useSharedValue(50); // Y position starts slightly off-screen
-  const scale = useSharedValue(1.2); // Scale starts slightly larger for a zoom effect
+  const opacity = useSharedValue(0); 
+  const translateY = useSharedValue(50); 
+  const scale = useSharedValue(1.2); 
 
   useEffect(() => {
     // Start animations
@@ -27,10 +27,10 @@ const SplashScreenComponent = () => {
 
     // Navigate to the next screen after 6 seconds
     const timeout = setTimeout(() => {
-      (navigation as any).navigate("index"); // Replace Splash screen with Home
+      (navigation as any).navigate("index"); 
     }, 6000);
 
-    return () => clearTimeout(timeout); // Cleanup timeout if component unmounts
+    return () => clearTimeout(timeout); 
   }, []);
 
   // Animated styles
@@ -56,11 +56,11 @@ const SplashScreenComponent = () => {
   );
 };
 
-// Styling for splash screen
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF", // White background color
+    backgroundColor: "#FFFFFF", 
     justifyContent: "center",
     alignItems: "center",
   },
@@ -70,15 +70,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   textContainer: {
-    alignItems: 'center', // Center align the text
+    alignItems: 'center',
   },
   text: {
-    fontSize: 32, // Large font size for prominence
+    fontSize: 32, 
     fontWeight: "bold",
-    color: "#333333", // Dark color for contrast
+    color: "#333333", 
     textAlign: "center",
   },
 });
 
-export default SplashScreenComponent;
+export default Component;
 

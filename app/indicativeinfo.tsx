@@ -51,6 +51,7 @@ const IndicativeInfo = () => {
 
   const handlePrevious = () => {
     console.log("Previous button pressed");
+    (navigation as any).navigate('home'); 
   };
 
   const [province, setProvince] = useState("");

@@ -32,11 +32,11 @@ const IndicativeInfo2: React.FC = () => {
 
   // State management for form inputs
   const [locality, setLocality] = useState("");
-  const [section, setSection] = useState<string>(""); // Keeps as string for input
-  const [lot, setLot] = useState<string>(""); // Keeps as string for input
-  const [structure, setStructure] = useState<string>(""); // Keeps as string for input
-  const [PDno, setPDNo] = useState<string>(""); // Keeps as string for input
-  const [householdno, setHousehold] = useState<string>(""); // Keeps as string for input
+  const [section, setSection] = useState<string>(""); 
+  const [lot, setLot] = useState<string>(""); 
+  const [structure, setStructure] = useState<string>(""); 
+  const [PDno, setPDNo] = useState<string>(""); 
+  const [householdno, setHousehold] = useState<string>(""); 
 
   // Handle form submission
   const handlePersonInfo = async () => {
@@ -125,7 +125,7 @@ const IndicativeInfo2: React.FC = () => {
             value={section}
             onChangeText={setSection}
             placeholderTextColor="#888"
-            keyboardType="numeric" // Optional: Limit input to numbers
+            keyboardType="numeric" 
           />
 
           <Text style={styles.label}>Lot:</Text>
@@ -135,7 +135,7 @@ const IndicativeInfo2: React.FC = () => {
             value={lot}
             onChangeText={setLot}
             placeholderTextColor="#888"
-            keyboardType="numeric" // Optional: Limit input to numbers
+            keyboardType="numeric" 
           />
 
           <Text style={styles.label}>Structure/Record No.:</Text>
@@ -145,7 +145,7 @@ const IndicativeInfo2: React.FC = () => {
             value={structure}
             onChangeText={setStructure}
             placeholderTextColor="#888"
-            keyboardType="numeric" // Optional: Limit input to numbers
+            keyboardType="numeric" 
           />
 
           <Text style={styles.label}>PD No.:</Text>
@@ -155,7 +155,7 @@ const IndicativeInfo2: React.FC = () => {
             value={PDno}
             onChangeText={setPDNo}
             placeholderTextColor="#888"
-            keyboardType="numeric" // Optional: Limit input to numbers
+            keyboardType="numeric" 
           />
 
           <Text style={styles.label}>Household No.:</Text>
@@ -165,7 +165,7 @@ const IndicativeInfo2: React.FC = () => {
             value={householdno}
             onChangeText={setHousehold}
             placeholderTextColor="#888"
-            keyboardType="numeric" // Optional: Limit input to numbers
+            keyboardType="numeric"
           />
            {/* Buttons */}
         <TouchableOpacity

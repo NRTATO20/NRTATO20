@@ -149,23 +149,23 @@ const IndicativeInfo3 = () => {
 
 const styles = StyleSheet.create({
   scrollContainer: {
-    flexGrow: 1,  // Allows ScrollView to expand as needed
+    flexGrow: 1, 
     backgroundColor: "#f2f2f2",
-    paddingVertical: 20, // Add vertical padding
+    paddingVertical: 20, 
   },
   container: {
     padding: 20,
     backgroundColor: "#fff",
     borderRadius: 12,
-    elevation: 3, // Add elevation for shadow effect
-    marginHorizontal: 20, // Margin for spacing
-    marginBottom: 20, // Space from the footer
+    elevation: 3, 
+    marginHorizontal: 20, 
+    marginBottom: 20, 
   },
   headerText: {
     fontSize: 16,
     color: "#666",
     textAlign: "center",
-    marginBottom: 20, // Space between text and input
+    marginBottom: 20, 
   },
   input: {
     height: 50,
@@ -187,17 +187,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#666",
     textAlign: "center",
-    marginVertical: 20, // Space between text and buttons
+    marginVertical: 20, 
   },
   button: {
-    backgroundColor: "#11B5FB",  // Light blue background
+    backgroundColor: "#11B5FB", 
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
     width: 100,
-    marginBottom: 10, // Space below the button
+    marginBottom: 10, 
     bottom: -99,
     left: 195
   },
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
     width: 100,
     marginBottom: 10,
     bottom: -48,
-    left: 86 // Space below the button
+    left: 86 
   },
   cancelbuttonText: {
     color: "#fff",
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: 90,
     marginBottom: 10,
-    left: -12 // Space below the button
+    left: -12 
   },
   prevbuttonText: {
     color: "#fff",

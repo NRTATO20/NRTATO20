@@ -28,41 +28,41 @@ export interface Person {
   date: string;
   gender: string;
   maritalstatus: string;
-  isCitizen: string; // New field
-  country: string | null; // New field, can be null if person is a citizen
+  isCitizen: string; 
+  country: string | null; 
 }
 
 export const initializeDB = async () => {
   try {
     await db.execAsync(`
       PRAGMA journal_mode = WAL;
-      DROP TABLE IF EXISTS person;
-      CREATE TABLE IF NOT EXISTS person (
-        id INTEGER PRIMARY KEY NOT NULL,
-        province TEXT NOT NULL,
-        district TEXT NOT NULL,
-        LLG TEXT NOT NULL,
-        ward TEXT NOT NULL,
-        censusunit TEXT NOT NULL,
-        censustype TEXT NOT NULL,
-        workloadno INTEGER NOT NULL,
-        locality TEXT NOT NULL,
-        section INTEGER NOT NULL,
-        lot INTEGER NOT NULL,
-        structureno INTEGER NOT NULL,
-        PDno INTEGER NOT NULL,
-        householdno INTEGER NOT NULL,
-        totalpeople INTEGER NOT NULL,
-        firstName TEXT NOT NULL,
-        lastName TEXT NOT NULL,
-        relationship TEXT NOT NULL,
-        phone TEXT NOT NULL,
-        email TEXT NOT NULL,
-        date TEXT NOT NULL,
-        gender TEXT NOT NULL,
-        maritalstatus TEXT NOT NULL,
-        isCitizen TEXT NOT NULL,  -- New field to track citizenship status
-        country TEXT              -- New field to store country for non-citizens
+CREATE TABLE IF NOT EXISTS person (
+    id INTEGER PRIMARY KEY NOT NULL,
+    province TEXT NOT NULL,
+    district TEXT NOT NULL,
+    LLG TEXT NOT NULL,
+    ward TEXT NOT NULL,
+    censusunit TEXT NOT NULL,
+    censusunittype TEXT NOT NULL,   -- This is the column causing the issue
+    workloadno INTEGER NOT NULL,
+    locality TEXT NOT NULL,
+    section INTEGER NOT NULL,
+    lot INTEGER NOT NULL,
+    structureno INTEGER NOT NULL,
+    PDno INTEGER NOT NULL,
+    householdno INTEGER NOT NULL,
+    totalpeople INTEGER NOT NULL,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL,
+    relationship TEXT NOT NULL,
+    phone TEXT NOT NULL,
+    email TEXT NOT NULL,
+    date TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    maritalstatus TEXT NOT NULL,
+    isCitizen TEXT NOT NULL,
+    country TEXT
+      
       );
     `);
     console.log("Table 'person' created successfully.");

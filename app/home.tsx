@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   Text,
   View,
-  Alert, // Import Alert
+  Alert,
+  ScrollView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -25,14 +26,14 @@ export default function HomeScreen() {
       [
         {
           text: "Cancel",
-          style: "cancel", // Style for cancel button
+          style: "cancel", 
         },
         {
           text: "OK",
-          onPress: () => (navigation as any).navigate("auth"), // Navigate to auth screen (logout)
+          onPress: () => (navigation as any).navigate("auth"), 
         },
       ],
-      { cancelable: false } // Prevent closing by tapping outside the alert
+      { cancelable: false } 
     );
   };
 
